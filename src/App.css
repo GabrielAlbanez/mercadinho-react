@@ -1,0 +1,114 @@
+.seguradora {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: #efefef;
+}
+.seguradora-responsive {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: #efefef;
+}
+.teste {
+  display: flex;
+  justify-content: space-evenly;
+}
+.d-block w-100 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body {
+  background-color: #efefef;
+}
+
+@media only screen and (max-width: 985px) {
+  nav {
+    height: 100px;
+    gap: 300px;
+  }
+  .logo {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .seguradora {
+    height: 300px;
+    width: 100%;
+  }
+  .d-flex {
+    flex-direction: column;
+  }
+}
+
+.imagenComeco {
+  display: flex;
+  gap: 14px;
+  padding: 30px;
+}
+
+.primeiraImagen {
+  width: 74%;
+  background-color: crimson;
+  height: 120px;
+  background-image: url(https://static.clubeextra.com.br/static/ex/1681240619204-desk-230411-desk-filete-freteepraja-diadocafe.jpg?im=Resize);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.segundaImagen {
+  background-color: aqua;
+  width: 26%;
+  height: 120px;
+  background-image: url(img/im5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.texsize {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.asd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.primeiraImagen2 {
+  width: 100%;
+  background-color: crimson;
+  height: 120px;
+  background-image: url(https://static.clubeextra.com.br/static/ex/1681305958095-desk-230412-desk-filete-guerrilha-spaten.jpg?im=Resize,width=1600);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.espaco {
+  height: 20px;
+}
+h1{
+
+  text-align: center;
+}
+
+.tamnahoImg{
+
+height: 192px;
+}
