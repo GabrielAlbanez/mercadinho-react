@@ -14,6 +14,9 @@ import { gsap } from "gsap";
 
 import Card from "react-bootstrap/Card";
 
+
+//cor vermelha da logo do carrefour fc0404
+
 const logotipo = [
   <img
     src="https://logodownload.org/wp-content/uploads/2015/02/carrefour-logo-1-1.png"
@@ -74,14 +77,14 @@ function NavScrollExample() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1" style={{ color: "#009966" }}>
+              <Nav.Link href="#action1" style={{ color: "#044ca4" }}>
                 <nav className="texsize">Home</nav>
               </Nav.Link>
-              <Nav.Link href="#action2" style={{ color: "#009966" }}>
+              <Nav.Link href="#action2" style={{ color: "#044ca4" }}>
                 <nav className="texsize">Ofertas e Cupões</nav>
               </Nav.Link>
 
-              <Nav.Link href="action3" style={{ color: "#009966" }}>
+              <Nav.Link href="action3" style={{ color: "#044ca4" }}>
                 <nav className="texsize">Carrinho</nav>
               </Nav.Link>
             </Nav>
@@ -94,7 +97,7 @@ function NavScrollExample() {
                 aria-label="Search"
               />
             </Form>
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-primary">Search</Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
