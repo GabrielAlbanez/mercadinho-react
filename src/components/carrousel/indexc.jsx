@@ -9,12 +9,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Carousel from "react-bootstrap/Carousel";
-import img from "./img/img2.png";
+// import img from "./img/img2.png";
 import { gsap } from "gsap";
 
 import Card from "react-bootstrap/Card";
 
-export default function index() {
+export default function indexc() {
   return (
     <div>
 <MeuCarousel/>

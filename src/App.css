@@ -1,3 +1,7 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;1,700&family=Poppins:wght@200;300&family=Roboto:wght@300;400&display=swap');
 .seguradora {
   display: flex;
   width: 100%;
@@ -95,13 +99,13 @@ body {
   width: 100%;
   background-color: crimson;
   height: 120px;
-  background-image: url(https://static.clubeextra.com.br/static/ex/1681305958095-desk-230412-desk-filete-guerrilha-spaten.jpg?im=Resize,width=1600);
+  background-image: url(https://static.clubeextra.com.br/static/ex/1681305958095-desk-230412-desk-filete-guerrilha-spaten.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .espaco {
-  height: 20px;
+  height: 40px;
 }
 h1{
 
@@ -111,4 +115,13 @@ h1{
 .tamnahoImg{
 
 height: 192px;
+}
+
+.link{
+  text-decoration: none;
+
+}
+
+.linkEstilizado{
+  text-decoration: underline;
 }

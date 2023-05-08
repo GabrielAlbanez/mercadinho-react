@@ -1,5 +1,5 @@
 import React from "react";
-import "../../App.css";
+import  estilzar from  "../../App.css";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
@@ -13,7 +13,7 @@ import img from "../../img/img.png";
 import img2 from "../../img/img2.png";
 import { gsap } from "gsap";
 import Card from "react-bootstrap/Card";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const logotipo = [
   <img
@@ -22,6 +22,8 @@ const logotipo = [
     height="80"
   />,
 ];
+
+
 
 export default function Index() {
   return (
@@ -33,13 +35,19 @@ export default function Index() {
 
 function NavScrollExample() {
   const [teste, setTeste] = useState(false);
+  const local = useLocation()
+ 
+
+
   return (
     <div className={teste ? "seguradora" : "seguradora-responsive"}>
       <Navbar expand="lg">
         <Container fluid>
+          <Link to={"/"}>
           <Navbar.Brand href="#" className="logo">
             {logotipo[0]}
           </Navbar.Brand>
+          </Link>
 
           <Navbar.Toggle
             aria-controls="navbarScroll"
@@ -65,18 +73,33 @@ function NavScrollExample() {
               navbarScroll
             >
               <Nav.Link href="#action1" style={{ color: "#044ca4" }}>
-                <Link to={'/'}>
+                <Link to={'/'} className={
+                  `
+                ${estilzar.link}
+                ${local.pathname === "/" ? estilzar.linkEstilizado : ""}
+                
+                `}>
                   <nav className="texsize">Home</nav>
                 </Link>
               </Nav.Link>
               <Nav.Link href="#action2" style={{ color: "#044ca4" }}>
-                <Link to={'/ofertas'}>
+                <Link to={'/ofertas'} className={
+                  `
+                ${estilzar.link}
+                ${local.pathname === "/ofertas" ? estilzar.linkEstilizado : ""}
+                
+                `}>
                   <nav className="texsize">OFertas e Cupões</nav>
                 </Link>
               </Nav.Link>
 
               <Nav.Link href="action3" style={{ color: "#044ca4" }}>
-                <Link to={'/carrinho'}>
+                <Link to={'/carrinho'} className={
+                  `
+                ${estilzar.link}
+                ${local.pathname === "/carrinho" ? estilzar.linkEstilizado : ""}
+                
+                `}>
                   <nav className="texsize">Carrinho</nav>
                 </Link>
               </Nav.Link>
@@ -90,7 +113,7 @@ function NavScrollExample() {
                 aria-label="Search"
               />
             </Form>
-            <Button variant="outline-primary">Search</Button>
+            <Button variant="outline-primary"  >Search</Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

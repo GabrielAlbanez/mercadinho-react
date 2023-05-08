@@ -9,23 +9,25 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Carousel from "react-bootstrap/Carousel";
-import img from "./img/img2.png";
+// import img from "./img/img2.png";
 import { gsap } from "gsap";
 
 import Card from "react-bootstrap/Card";
-export default function index() {
+export default function indexh() {
   return (
     <div>
-      
-       <Foterzinho/>
 
+    <Headerzinho/>
     </div>
   )
 }
-function Foterzinho() {
-    return (
-      <div className="imagenComeco">
-        <div className="primeiraImagen2"></div>
+function Headerzinho() {
+  return (
+    <div className="imagenComeco">
+      <div className="primeiraImagen"></div>
+      <div className="segundaImagen">
+        <h1></h1>
       </div>
-    );
-  }
+    </div>
+  );
+}
