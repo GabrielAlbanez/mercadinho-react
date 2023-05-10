@@ -138,9 +138,11 @@ function NavScrollExample() {
 
   const [teste, setTeste] = useState(false);
   const local = useLocation()
-  const [busca,setBusca] = useState("");
+  const [busca,setBusca] = useState(""); //preciso passar esse state para a paigna la dos cards 
+  //ai quando eu passar eu uso essa variavel que vai fazer a filtragemq que vai fazer a busca do produto de acordi com
+// o state passado
 
-  // produtosFiltrados  =  ListaProdutos.filter((value)=> value.startsWith(busca)))
+  
  
 
 
@@ -177,7 +179,7 @@ function NavScrollExample() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1" style={{ color: "#044ca4" }}>
+              <Nav.Link  style={{ color: "#044ca4" }}>
                 <Link to={'/'} className={
                   `
                 ${estilzar.link}
@@ -187,7 +189,7 @@ function NavScrollExample() {
                   <nav className="texsize">Home</nav>
                 </Link>
               </Nav.Link>
-              <Nav.Link href="#action2" style={{ color: "#044ca4" }}>
+              <Nav.Link  style={{ color: "#044ca4" }}>
                 <Link to={'/ofertas'} className={
                   `
                 ${estilzar.link}

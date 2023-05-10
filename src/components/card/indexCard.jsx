@@ -474,6 +474,11 @@ function Cardizinho2(){
         "https://classic.exame.com/wp-content/uploads/2016/09/size_960_16_9_lacta.jpg?quality=70&strip=info&w=960",
     }
   ];
+  
+  // produtosFiltrados  =  ListaProdutos.filter((value)=> value.startsWith(busca)))
+
+  
+
    return(
   <Container fluid className="flex-grow-1 pe-3 teste  w-100 asd" >
     {ListaProdutos.map((value,index)=>(
@@ -511,3 +516,4 @@ function Cardizinho2(){
   )
 
 }
+
