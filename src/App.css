@@ -95,6 +95,7 @@ body {
   width: 100%;
   flex-wrap: wrap;
   height: 100%;
+  box-sizing: border-box;
 }
 .primeiraImagen2 {
   width: 100%;
@@ -126,3 +127,7 @@ height: 192px;
 .linkEstilizado{
   text-decoration: underline;
 }
+.tamanhoImg{
+  height: 200px;
+}
+
