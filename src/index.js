@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { BuscaContextProvider } from './components/contexts/buscaContext';
+import { ProdutoContextProvider } from './components/contexts/produtosContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BuscaContextProvider>
+      <ProdutoContextProvider>
     <App />
+    </ProdutoContextProvider>
+    </BuscaContextProvider>
   </React.StrictMode>
 );
 

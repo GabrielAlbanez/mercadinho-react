@@ -1,5 +1,5 @@
 import React from "react";
-import  estilzar from  "../../App.css";
+import   "../../App.css";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
@@ -14,6 +14,8 @@ import img2 from "../../img/img2.png";
 import { gsap } from "gsap";
 import Card from "react-bootstrap/Card";
 import { Link, useLocation } from "react-router-dom";
+import {useContext} from "react"
+import { BuscaContext } from "../contexts/buscaContext";
 
 const logotipo = [
   <img
@@ -138,7 +140,7 @@ function NavScrollExample() {
 
   const [teste, setTeste] = useState(false);
   const local = useLocation()
-  const [busca,setBusca] = useState("");
+  const {busca,setBusca} = useContext(BuscaContext)
 
   // produtosFiltrados  =  ListaProdutos.filter((value)=> value.startsWith(busca)))
  
@@ -180,8 +182,8 @@ function NavScrollExample() {
               <Nav.Link href="#action1" style={{ color: "#044ca4" }}>
                 <Link to={'/'} className={
                   `
-                ${estilzar.link}
-                ${local.pathname === "/" ? estilzar.linkEstilizado : ""}
+                link
+                ${local.pathname === "/" ? "linkEstilizado" : ""}
                 
                 `}>
                   <nav className="texsize">Home</nav>
@@ -190,8 +192,8 @@ function NavScrollExample() {
               <Nav.Link href="#action2" style={{ color: "#044ca4" }}>
                 <Link to={'/ofertas'} className={
                   `
-                ${estilzar.link}
-                ${local.pathname === "/ofertas" ? estilzar.linkEstilizado : ""}
+                link
+                ${local.pathname === "/ofertas" ? "linkEstilizado" : ""}
                 
                 `}>
                   <nav className="texsize">OFertas e Cupões</nav>
@@ -201,8 +203,8 @@ function NavScrollExample() {
               <Nav.Link href="action3" style={{ color: "#044ca4" }}>
                 <Link to={'/carrinho'} className={
                   `
-                ${estilzar.link}
-                ${local.pathname === "/carrinho" ? estilzar.linkEstilizado : ""}
+                link
+                ${local.pathname === "/carrinho" ? "linkEstilizado" : ""}
                 
                 `}>
                   <nav className="texsize">Carrinho</nav>
