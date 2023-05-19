@@ -18,6 +18,7 @@ import { BuscaContext } from "../contexts/buscaContext";
 import { ProdutoContext } from "../contexts/produtosContext";
 
 import Card from "react-bootstrap/Card";
+import { CarrinhoContext } from "../contexts/carrinho";
 
 export default function indexCard() {
   return (
@@ -380,6 +381,8 @@ function Cardizinho2(){
 
   const {ListaProdutos} = useContext(ProdutoContext)
 
+  const {carrinhoCard,setCarrinhoCard} = useContext(CarrinhoContext)
+
   
  
    const {busca,setBusca} = useContext(BuscaContext)
@@ -389,22 +392,22 @@ function Cardizinho2(){
 
    console.log(buscaString)
 
-    const produtosFiltrados  =  ListaProdutos.filter((value)  => value.nome.includes(buscaString));
+    const produtosFiltrados  =  ListaProdutos.filter((objeto)  => objeto.nome.includes(buscaString));
    
 
    return(
   <Container fluid className="flex-grow-1 pe-3 teste  w-100 asd" >
-    {produtosFiltrados.map((value,index)=>(
+    {produtosFiltrados.map((objeto,index)=>(
 
 
       <Card style={{ width: "18rem" }}>
         <Card.Img
           variant="top"
-          src={value.linkImg}
+          src={objeto.linkImg}
           className="tamanhoImg"
         />
         <Card.Body>
-          <Card.Title>{value.nome}</Card.Title>
+          <Card.Title>{objeto.nome}</Card.Title>
           <Card.Text
             style={{
               display: "flex",
@@ -412,11 +415,14 @@ function Cardizinho2(){
               paddingLeft: "5px",
             }}
           >
-            <div>{value.quantidade}</div>
-            <div>{value.Valor}</div>
+            <div>{objeto.quantidade}</div>
+            <div>{objeto.Valor}</div>
           </Card.Text>
-          <Button variant="primary">
-            Adicionar Carrinho <MdShoppingCart />
+          <Button variant="primary" onClick={()=>{
+            setCarrinhoCard([...carrinhoCard, objeto])
+            console.log(carrinhoCard)
+          }}>
+             Adicionar Carrinho <MdShoppingCart/>
           </Button>
         </Card.Body>
       </Card>
